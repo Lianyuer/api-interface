@@ -1,11 +1,10 @@
 package com.yu.apiinterface.controller;
 
 import cn.hutool.core.codec.Base64;
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yu.apiinterface.model.entity.User;
 import com.yu.apiinterface.service.UserService;
-import com.yu.apiinterface.utils.SignUtils;
+import com.yu.yuapiclientsdk.utils.SignUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;

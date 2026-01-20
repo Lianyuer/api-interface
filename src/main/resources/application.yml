@@ -29,3 +29,8 @@ mybatis-plus:
   configuration:
     # 关闭下划线转驼峰
     map-underscore-to-camel-case: false
+
+yuapi:
+  client:
+    access-key: testAccessKey
+    secret-key: testSecretKey
