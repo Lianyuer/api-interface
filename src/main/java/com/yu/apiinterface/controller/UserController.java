@@ -26,9 +26,13 @@ public class UserController {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
-    @GetMapping("/get")
-    public String getNameByGet(String name) {
-        return "GET 你的名字是" + name;
+    @GetMapping("/getNameById")
+    public String getNameById(Long id) {
+        User user = userService.getById(id);
+        if (user == null) {
+            throw new RuntimeException("用户不存在");
+        }
+        return "GET 名字是" + user.getUserName();
     }
 
     @PostMapping("/getName")
